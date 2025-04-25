@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  animation: dropFade 0.5s ease-out;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #0288d1;
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.5s ease-out;
+}
+
+a:hover {
+  background-color: #0277bd;
+}
+
+table {
+  width: 85%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  animation: slideFade 0.5s ease-out;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1fafe;
+  transition: background-color 0.3s ease;
+}
+
+td a {
+  display: inline-block;
+  padding: 7px 11px;
+  margin-right: 6px;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td a:first-child {
+  background-color: #26a69a;
+}
+
+td a:first-child:hover {
+  background-color: #1e8e86;
+  transform: scale(1.05);
+}
+
+td a:last-child {
+  background-color: #ef5350;
+}
+
+td a:last-child:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Custom Animations */
+@keyframes dropFade {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
